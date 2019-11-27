@@ -28,7 +28,7 @@ class KafkaUtil {
   private val config: Map[String, String] = Map(
     "bootstrap.servers" -> "hadoop1:9092",
     "key.serializer" -> "org.apache.kafka.common.serialization.StringSerializer",
-    "value.serializer" -> "org.apache.kafka.common.serialization.StringSerializer",
+    "value.serializer" -> "org.apache.kafka.common.serialization.StringSerializer"
 
   )
 
