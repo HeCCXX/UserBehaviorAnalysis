@@ -36,8 +36,8 @@ class TopNHotNet(topsize : Int) extends KeyedProcessFunction[Long,NetWorkLogCoun
     val resultStr = new StringBuilder
     resultStr.append("++++++++++++++++++\n")
     resultStr.append("时间： ").append(new Timestamp(timestamp - 10*1000)).append("\n")
-    for (i <- listBuffer.indices) {
-      val netWorkLogCount: NetWorkLogCount = listBuffer(i)
+    for (i <- netWorkLogCounts.indices) {
+      val netWorkLogCount: NetWorkLogCount = netWorkLogCounts(i)
       resultStr.append("No").append(i+1).append(":")
         .append(" URL : ").append(netWorkLogCount.url)
         .append("流量 ： ").append(netWorkLogCount.count).append("\n")
